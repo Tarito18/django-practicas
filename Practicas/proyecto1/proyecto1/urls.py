@@ -15,11 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from Practicas.proyecto1.proyecto1.views import probandoTemplate
-from proyecto1.views import saludo
+from proyecto1.views import saludo, segunda_vista, dia_hoy, mi_nombre #Importo el saludo que hice en views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('saludo',saludo),
-    path('probando el template bro', probandoTemplate),
+    path('saludo/',saludo), #aqui, hago el nombre del url, y llamo a la vista, la cual es , saludo
+    path('nashe/',segunda_vista),
+    path('dias/',dia_hoy),
+    path('nombre/<nombre>',mi_nombre)
+  
 ]
