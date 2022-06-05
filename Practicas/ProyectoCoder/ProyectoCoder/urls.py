@@ -1,4 +1,4 @@
-"""proyecto1 URL Configuration
+"""ProyectoCoder URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.0/topics/http/urls/
@@ -15,15 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from proyecto1.views import saludo, segunda_vista, dia_hoy, mi_nombre, primer_template #Importo el saludo que hice en views
-
+from AppCoder.views import Curso
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('saludo/',saludo), #aqui, hago el nombre del url, y llamo a la vista, la cual es , saludo
-    path('nashe/',segunda_vista),
-    path('dias/',dia_hoy),
-    path('nombre/<nombre>',mi_nombre),
-    path('template/',primer_template),
-  
+    path('curso/',Curso)
 ]
